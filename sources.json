@@ -1,0 +1,12 @@
+[
+  {
+    "name": "ft06",
+    "source": "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/jobshop1.txt",
+    "sha256": "0cc5ca77665766f7829c20722a9439800ee2b34e8271ed9f0ca98c41b0c3ab3b"
+  },
+  {
+    "name": "ft10",
+    "source": "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/jobshop1.txt",
+    "sha256": "e10bbc52f7a7bb7604bdadfbe322af84fc7726dd9937512b89759e7ac2d9aac3"
+  }
+]
