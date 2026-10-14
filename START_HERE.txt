@@ -1,0 +1,62 @@
+SEQUENCE - JOB-SHOP SCHEDULING PROJECT
+======================================
+
+WINDOWS LAPTOP
+
+1. Extract the entire ZIP file into a normal folder.
+   Do not run the application from inside the ZIP preview.
+
+2. Install Python 3.12 and Node.js 22 or newer if they are not installed.
+   Enable "Add python.exe to PATH" in the Python installer.
+   Close and reopen your terminal after installing them.
+
+3. Double-click START_WINDOWS.bat in the extracted folder.
+   It creates a local Python environment, installs the project dependencies,
+   and starts the backend and frontend. Internet is needed to install dependencies.
+   Keep the terminal window open while using the app.
+
+4. Open this address in your browser:
+   http://127.0.0.1:5173
+
+5. Select a dataset, choose your solver/objective, and click Solve schedule.
+   Press Ctrl+C in the terminal when you want to stop the app.
+
+CSV INPUT
+
+The CSV columns are Job, Operation, Machine, Processing Time.
+ProcessingTime and Processing_Time are also accepted header spellings.
+Operation values can be numbers or labels such as O1, O2, O10.
+Job and machine labels such as J1 and M1 are preserved.
+
+If replacing an older copy of this project, stop the old app first, extract
+the updated ZIP into a new folder, then start that folder's START_WINDOWS.bat.
+
+MANUAL SETUP (WINDOWS POWERSHELL)
+
+Open a terminal in the extracted project folder and run:
+
+  python -m venv .venv
+  .\.venv\Scripts\python.exe -m pip install -r backend/requirements.lock
+  cd frontend
+  npx --yes pnpm@11.19.0 install --frozen-lockfile
+  cd ..
+  .\.venv\Scripts\python.exe scripts/dev.py
+
+OTHER SYSTEMS / DOCKER
+
+README.md has macOS/Linux instructions, Docker deployment, API documentation,
+input formats, mathematical formulations, and known limitations.
+REPORT.md maps the provided requirements to the implemented features.
+
+WHAT IS INCLUDED
+
+- Complete editable backend and frontend source code
+- Both CP-SAT and PuLP/CBC solver implementations
+- FT06 and FT10 benchmark data, with source information
+- Automated tests, dependency manifests and lockfiles
+- Docker configuration and setup documentation
+- A prebuilt frontend, when present in the packaged project
+
+Python/Node.js themselves, installed dependency folders, local databases,
+temporary files, and machine-specific virtual environments are not bundled.
+Dependencies are installed for your own laptop during setup.

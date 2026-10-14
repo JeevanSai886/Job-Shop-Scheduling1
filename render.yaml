@@ -1,0 +1,7 @@
+# Render > New > Blueprint, select your GitHub repository.
+services:
+  - type: web
+    name: job-shop-scheduling-demo
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
